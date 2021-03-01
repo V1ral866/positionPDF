@@ -1,0 +1,31 @@
+<apex:page controller="PositionPDFController" renderAs="pdf"> 
+    
+    <p>Position 
+        <b style="font-family: Arial Unicode MS;" >
+            <apex:outputText value=" {!pos.Name}"/>
+        </b>
+    </p>
+    
+    <p>Details:</p>
+    
+    <table>
+    <tr>
+        <th>Id:</th>
+        <td><apex:outputText value="{!pos.Id}"/></td>
+    </tr>
+    <tr>
+        <th>Category:</th>
+        <td style="font-family: Arial Unicode MS;">
+            <apex:outputText value="{!pos.Category__r.Name}"/>
+        </td>
+    </tr>
+    <tr>
+        <th>Price:</th>
+        <td><apex:outputText value="{!pos.Price__c}"/></td>
+    </tr>
+    <tr>
+        <th>Vendor Code:</th>
+        <td><apex:outputText value="{!pos.Vendor_Code__c}"/></td>
+    </tr>
+    </table>
+</apex:page>
